@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>鼠标移入(移出),停入(开出)车库</title>
+  <style>
+    img:nth-child(1){
+      position: relative;
+    }
+    img:nth-child(2){
+      position: absolute;
+      top: 0px;
+      left: 320px;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <img src="img/carport.png">
+    <img class="car" src="img/car.png">
+  </div>
+</body>
+<script src="js/jquery-1.3.1.js"></script>
+<script>
+  $('.car').hover(function() {
+    $('.car').animate({left: '0px', duration: 300})
+  }, function() {
+    $('.car').animate({left: '320px', duration: 300})
+  })
+</script>
+</html>

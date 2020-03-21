@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>停车动画</title> 
+		<style>
+			*{ padding:0px; margin:0px; }
+			body{ 
+					background:#D5DEE7; 
+			}
+			.car{ 
+				position: relative;   
+			}
+		</style>
+	</head>
+	<body>
+    <img class="car" src="http://img.mukewang.com/5343d553000107a107200701.jpg" width="350" height="341"/>    
+	</body>
+	<script src="js/jquery-1.3.1.js"></script>
+	<script type="text/javascript">
+		$('.car').hover(function() {
+			$('.car').animate({top: '500px', duration: 600})
+		}, function() {
+			$('.car').animate({top: '0px', duration: 600})
+		})
+	</script>
+</html>
